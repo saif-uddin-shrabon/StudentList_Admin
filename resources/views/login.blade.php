@@ -15,7 +15,7 @@
         <div class="card mx-auto  shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 475px; hight: 550px; margin-top: 175px">
             <div class="card-body">
 
-    <form action="{{url('/')}}/register" method="post">
+    <form action="{{url('/')}}/login" method="post">
       
         @csrf
        {{-- <pre>
@@ -27,18 +27,18 @@
         <div class="container">
 
        
-          <h1 class="text-center">SIGN UP</h1>
+          <h1 class="text-center">SIGN IN</h1>
           <span class="fs-6 tex">Enter your credentials to access your account </span>
-            <x-input type="text" name="name" label="Please Enter your name"  />
+       
             <x-input type="email" name="email" label="Please Enter your email"  />
             <x-input type="password" name="password" label="Please Enter your password"  />
-            <x-input type="password" name="confirm-password" label="Re-Enter Enter your password"  />
-
+            
             <button class="btn btn-primary ">
 
             Submit
 
             </button>
+            <span ><p  class="fs-6">Registration</p></span>
 
         </div>
         </form>

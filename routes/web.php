@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use App\Http\Controllers\RegistrationController;
 
 Route::get('/register', [RegistrationController::class, 'index']);
 Route::post('/register',[RegistrationController::class, 'register']);
+
+Route::get('/login', [LoginController::class, 'linginindex']);
+Route::post('/login', [LoginController::class, 'login']);
