@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\LoginController;
+use App\Models\Studentlist;
 
 /*
+
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -17,6 +19,13 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/register', [RegistrationController::class, 'index']);
 Route::post('/register',[RegistrationController::class, 'register']);
+Route::post('/register',[RegistrationController::class, 'view']);
 
-Route::get('/login', [LoginController::class, 'linginindex']);
+Route::get('/', [LoginController::class, 'linginindex']);
 Route::post('/login', [LoginController::class, 'login']);
+
+Route::get('/studentlist', function(){
+    $Studentlist = Studentlist::all();
+    echo "<pre>";
+    print_r($Studentlist->toArray());
+   });
